@@ -8,6 +8,10 @@
     "build": "electron-builder --",
     "postinstall": "patch-package"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Constaline/unblockneteasemusic-desktop.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "electron": "8.5.3",
