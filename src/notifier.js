@@ -18,7 +18,8 @@ const showNotification = ({ message }) => {
     title: global.appInfo.name,
     message,
     icon: path.join(__dirname, '../../assets/notifer.png'),
-    sound: true,
+    sound: false,
+    appName: global.appInfo.name, 
     wait: true
   },);
 }
