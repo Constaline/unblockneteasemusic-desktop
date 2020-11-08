@@ -20,12 +20,6 @@
   "build": {
     "productName": "UnblockNeteaseMusic",
     "appId": "com.unblockneteasemusic.desktop",
-    "asar": {
-      "smartUnpack": false
-    },
-    "asarUnpack": [
-      "**/*.exe"
-    ],
     "directories": {
       "output": "dist"
     },
@@ -35,7 +29,8 @@
       "perMachine": true,
       "runAfterFinish": true,
       "allowElevation": true,
-      "artifactName": "${name}-${version}.${ext}"
+      "artifactName": "${name}-${version}.${ext}",
+      "createDesktopShortcut": false
     },
     "win": {
       "target": [
