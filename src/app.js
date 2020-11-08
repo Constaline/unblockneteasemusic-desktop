@@ -1,6 +1,6 @@
 const {app} = require('electron')
 const {createTray} = require('./tray')
-const {startServer} = require('./server')
+const {startServerInstance} = require('./server')
 const {showDialog} = require('./notifier')
 
 const instanceLock = app.requestSingleInstanceLock()
@@ -14,6 +14,6 @@ if (!instanceLock) {
 
   app.whenReady().then(() => {
     createTray()
-    startServer()
+    startServerInstance()
   })
 }

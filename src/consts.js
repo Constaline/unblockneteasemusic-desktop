@@ -1,9 +1,9 @@
 const {app} = require('electron')
 const path = require('path')
-const packageJSON = require('../package.json')
 
 global.ROOT_PATH = path.join(__dirname, '../')
 global.ICON_PATH = path.join(ROOT_PATH, './assets/icon.png')
+global.DEFAULT_PORT = 16163
 
 global.appInfo = {
   name: 'UnblockNeteaseMusic',
