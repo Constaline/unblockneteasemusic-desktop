@@ -8,8 +8,7 @@ global.ICON_PATH = path.join(ROOT_PATH, './assets/icon.png')
 global.appInfo = {
   name: 'UnblockNeteaseMusic',
   version: app.getVersion(),
-  platform: process.platform,
-  repository: packageJSON.repository
+  platform: process.platform
 };
 
 global.tray = null;

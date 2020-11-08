@@ -2,10 +2,7 @@ const {app, Menu, Tray, shell} = require('electron')
 
 const contextMenu = Menu.buildFromTemplate([
   {
-    label: `${global.appInfo.name} v${appInfo.version}`,
-    click: () => {
-      shell.openExternal(global.appInfo.repository.url)
-    }
+    label: `${global.appInfo.name} v${appInfo.version}`
   },
   {
     type: 'separator' 
