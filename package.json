@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "electron": "8.5.3",
+    "electron": "9.3.3",
     "electron-builder": "21.2.0",
     "patch-package": "6.2.2"
   },
