@@ -4,7 +4,7 @@ let icon = nativeImage.createFromPath(ICON_PATH)
 
 const showDialog = ({ message }) => {
   return dialog.showMessageBox({
-    title: 'UnblockNeteaseMusic',
+    title: global.appName,
     message,
     icon
   })

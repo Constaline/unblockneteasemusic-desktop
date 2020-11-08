@@ -1,8 +1,15 @@
 const {notify} = require('./notifier')
+const {setTrayToolTip} = require('./tray')
+
+const showNotification = () => {
+  let url = `http://${global.address || '0.0.0.0'}:${global.port}`
+  notify({ message: `Server running @ ${url}` })
+  setTrayToolTip(`${global.appName} @ ${url}`)
+}
 
 const startServer = () => {
   require('@nondanee/unblockneteasemusic/app')
-  notify({ message: `Server running @ http://${global.address || '0.0.0.0'}:${global.port}` })
+  showNotification()
 };
 
 module.exports = {

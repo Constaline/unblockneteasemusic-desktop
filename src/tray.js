@@ -17,10 +17,16 @@ const createTray = () => {
       }
     }
   ])
-  tray.setToolTip('UnblockNeteaseMusic')
+  tray.setToolTip(global.appName)
   tray.setContextMenu(contextMenu)
 }
 
+const setTrayToolTip = (tooltip) => {
+  if(!tray) { return; }
+  tray.setToolTip(tooltip)
+}
+
 module.exports = {
-  createTray
+  createTray,
+  setTrayToolTip
 }
