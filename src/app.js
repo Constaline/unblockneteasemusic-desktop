@@ -9,7 +9,7 @@ if (!instanceLock) {
   app.quit()
 } else {
   app.on('second-instance', () => {
-    notify({message: 'An instance is already running'})
+    notify({message: 'Another instance is already running'})
   })
 
   app.whenReady().then(() => {
