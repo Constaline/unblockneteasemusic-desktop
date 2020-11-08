@@ -19,11 +19,17 @@
     "patch-package": "6.2.2"
   },
   "dependencies": {
-    "@nondanee/unblockneteasemusic": "0.25.3"
+    "@nondanee/unblockneteasemusic": "0.25.3",
+    "node-notifier": "8.0.0"
   },
   "build": {
     "productName": "UnblockNeteaseMusic",
     "appId": "com.unblockneteasemusic.desktop",
+    "asar": {
+      "smartUnpack": false
+    },
+    "asarUnpack": ["node_modules/node-notifier/vendor/**"],
+    "extraResources": ["assets/notifer.png"],
     "directories": {
       "output": "dist"
     },
@@ -45,7 +51,7 @@
           ]
         }
       ],
-      "icon": "resources/logo.png"
+      "icon": "assets/logo.png"
     }
   }
 }
