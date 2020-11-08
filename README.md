@@ -3,8 +3,8 @@
 UnblockNeteaseMusic Windows Desktop version.
 
 ## Usage
-1. Run and it listens at port 8080 (default).
-2. Open NeteaseMusic client, set proxy to IP 127.0.0.1, port 8080.
+1. Run and it listens at port 16163 (default).
+2. Open NeteaseMusic client, set proxy to IP 127.0.0.1, port 16163.
 3. Save and restart the client. Enjoy!
 
 ## Thanks
