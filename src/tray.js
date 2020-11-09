@@ -8,6 +8,12 @@ const contextMenu = Menu.buildFromTemplate([
     type: 'separator' 
   },
   {
+    label: `ViewLogFiles`,
+    click: () => {
+     shell.openExternal(global.LOG_PATH)
+    }
+  },
+  {
     type : 'checkbox',
     label: 'OpenAtLogin',
     checked: app.getLoginItemSettings().openAtLogin,
