@@ -35,7 +35,7 @@ const contextMenu = Menu.buildFromTemplate([
 ]);
 
 const createTray = () => {
-  tray = new Tray(ICON_PATH)
+  tray = new Tray(global.ICON_PATH.tray)
   tray.setToolTip(global.appInfo.name)
   tray.setContextMenu(contextMenu)
 }

@@ -2,7 +2,7 @@ const {app, dialog, nativeImage} = require('electron');
 const notifier = require('node-notifier');
 const path = require('path')
 
-let icon = nativeImage.createFromPath(ICON_PATH)
+let icon = nativeImage.createFromPath(global.ICON_PATH.common)
 
 const showDialog = ({ message }) => {
   return dialog.showMessageBox({
