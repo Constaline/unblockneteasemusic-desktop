@@ -24,7 +24,7 @@ const startServerInstance = () => {
   const startServer = (callback) => {
     startUnblockServer()
       .then(() => {
-        let url = `http://${global.address || '0.0.0.0'}:${global.port}`
+        let url = `http://${global.address || '127.0.0.1'}:${global.port}`
         showNotification({ message: `Server is running @ ${url}` })
         setTrayToolTip(`${global.appInfo.name} @ ${url}`)
       })
