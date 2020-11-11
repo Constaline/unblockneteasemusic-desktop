@@ -1,7 +1,7 @@
 const {app} = require('electron')
 const {showDialog, showNotification} = require('./notifier')
 const {setTrayToolTip} = require('./tray')
-const startUnblockServer = require('@nondanee/unblockneteasemusic/src/app');
+const startUnblockServer = require('../lib/UnblockNeteaseMusic/src/app');
 const {waterfall} = require('async');
 const portfinder = require('portfinder');
 portfinder.basePort = global.DEFAULT_PORT;
