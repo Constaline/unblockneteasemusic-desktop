@@ -43,6 +43,27 @@ index 9f69d61..aab5ba8 100644
 +
 +module.exports = startUnblockServer;
 \ No newline at end of file
+diff --git a/node_modules/@nondanee/unblockneteasemusic/src/provider/migu.js b/node_modules/@nondanee/unblockneteasemusic/src/provider/migu.js
+index 1af696b..849e740 100644
+--- a/node_modules/@nondanee/unblockneteasemusic/src/provider/migu.js
++++ b/node_modules/@nondanee/unblockneteasemusic/src/provider/migu.js
+@@ -36,14 +36,14 @@ const search = info => {
+ 
+ const single = (id, format) => {
+ 	const url =
+-		'http://music.migu.cn/v3/api/music/audioPlayer/getPlayInfo?' +
++		'https://music.migu.cn/v3/api/music/audioPlayer/getPlayInfo?' +
+ 		'dataType=2&' + crypto.miguapi.encryptBody({copyrightId: id.toString(), type: format})
+ 
+ 	return request('GET', url, headers)
+ 	.then(response => response.json())
+ 	.then(jsonBody => {
+ 		const {playUrl} = jsonBody.data
+-		return playUrl ? encodeURI(playUrl) : Promise.reject()
++		return playUrl ? encodeURI('http:' + playUrl) : Promise.reject()
+ 	})
+ }
+ 
 diff --git a/node_modules/@nondanee/unblockneteasemusic/src/provider/qq.js b/node_modules/@nondanee/unblockneteasemusic/src/provider/qq.js
 index bd64147..8673e0d 100644
 --- a/node_modules/@nondanee/unblockneteasemusic/src/provider/qq.js
