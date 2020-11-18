@@ -4,16 +4,17 @@ const {setTrayToolTip} = require('./tray')
 const startUnblockServer = require('../lib/UnblockNeteaseMusic/src/app');
 const {waterfall} = require('async');
 const portfinder = require('portfinder');
-portfinder.basePort = global.DEFAULT_PORT;
 
 const startServerInstance = () => {
+  let _port = global.userConfig.port;
+  portfinder.basePort = _port;
   const checkPort = (callback) => {
     portfinder.getPortPromise()
       .then((port) => {
-        if(port == global.DEFAULT_PORT) {
+        if(port == _port) {
           callback(null)
         } else {
-          callback(`Port ${global.DEFAULT_PORT} is already in use`)
+          callback(`Port ${_port} is already in use`)
         }
       })
       .catch((err) => {

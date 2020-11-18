@@ -10,8 +10,6 @@ global.ICON_PATH = {
   tray: path.join(ROOT_PATH, './assets/tray.png')
 }
 
-global.DEFAULT_PORT = '16163'
-
 global.appInfo = {
   name: 'UnblockNeteaseMusic',
   version: app.getVersion(),
@@ -20,3 +18,7 @@ global.appInfo = {
 
 global.tray = null;
 
+global.userConfig = {
+  port: '16163',
+  source: ['qq', 'kuwo', 'migu']
+}
