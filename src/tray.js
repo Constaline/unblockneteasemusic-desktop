@@ -8,14 +8,20 @@ const contextMenu = Menu.buildFromTemplate([
     type: 'separator' 
   },
   {
-    label: `ViewLogFiles`,
+    label: `Configuration`,
+    click: () => {
+      global.configStore.openInEditor()
+    }
+  },
+  {
+    label: `View Log Files`,
     click: () => {
      shell.openExternal(global.LOG_PATH)
     }
   },
   {
     type : 'checkbox',
-    label: 'OpenAtLogin',
+    label: 'Open At Login',
     checked: app.getLoginItemSettings().openAtLogin,
     click: () => {
       if(!app.isPackaged){ return; }

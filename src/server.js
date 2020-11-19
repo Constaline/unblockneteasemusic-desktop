@@ -28,6 +28,7 @@ const startServerInstance = () => {
         let url = `http://${global.address || '127.0.0.1'}:${global.port}`
         showNotification({ message: `Server is running @ ${url}` })
         setTrayToolTip(`${global.appInfo.name} @ ${url}`)
+        console.log('current source:', global.userConfig.source)
       })
       .catch(error => {
         callback(error)

@@ -1,5 +1,6 @@
 const {app} = require('electron')
 const path = require('path')
+const Store = require('electron-store');
 
 global.ROOT_PATH = path.join(__dirname, '../')
 global.USERDATA_PATH = app.getPath('userData');
@@ -18,7 +19,15 @@ global.appInfo = {
 
 global.tray = null;
 
+global.configStore = new Store({
+  defaults: { 
+    '__instruction__': 'After configuaration, please relaunch the app.', 
+    '__source_list__': `['qq', 'kuwo', 'migu', 'xiami', 'baidu', 'kugou', 'joox', 'youtube']`,
+    source: ['qq', 'kuwo', 'migu'] 
+  }
+});
+
 global.userConfig = {
   port: '16163',
-  source: ['qq', 'kuwo', 'migu']
+  source: configStore.get('source')
 }
