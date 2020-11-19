@@ -1,4 +1,5 @@
 const {app, Menu, Tray, shell} = require('electron')
+const {appQuit, appRelaunch} = require('./utils')
 
 const contextMenu = Menu.buildFromTemplate([
   {
@@ -34,14 +35,13 @@ const contextMenu = Menu.buildFromTemplate([
   { 
     label: 'Relaunch', 
     click: () => {
-      app.relaunch();
-      app.exit(0);
+      appRelaunch();
     }
   },
   { 
     label: 'Exit', 
     click: () => {
-      app.quit()  
+      appQuit() 
     }
   }
 ]);

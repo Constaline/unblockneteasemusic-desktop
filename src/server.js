@@ -1,9 +1,9 @@
-const {app} = require('electron')
 const {showDialog, showNotification} = require('./notifier')
 const {setTrayToolTip} = require('./tray')
 const startUnblockServer = require('../lib/UnblockNeteaseMusic/src/app');
 const {waterfall} = require('async');
 const portfinder = require('portfinder');
+const {appQuit} = require('./utils')
 
 const startServerInstance = () => {
   let _port = global.userConfig.port;
@@ -41,7 +41,7 @@ const startServerInstance = () => {
   ], (err, result) => {
     showDialog({ message: `Server error: ${err}`})
       .then(() => {
-        app.quit()
+        appQuit()
       })
   })
 };
