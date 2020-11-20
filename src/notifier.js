@@ -17,7 +17,7 @@ const showNotification = ({ message }) => {
   return notifier.notify({
     title: global.appInfo.name,
     message,
-    icon: path.join(__dirname, '../../assets/notifer.png'),
+    icon: path.join(global.ROOT_PATH, '../assets/notifer.png'),  // not to pack in asar
     sound: false,
     appName: global.appInfo.name, 
     wait: true

@@ -25,10 +25,6 @@ const removeConfigFile = () => {
   }
 }
 
-const openTodayLogFile = () => {
-  
-}
-
 module.exports = {
   appQuit,
   appRelaunch,
