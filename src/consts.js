@@ -34,7 +34,7 @@ let configStoreOptions = {
     },
     port: {
       type: 'number',
-      maximum: 65535,
+      maximum: 65530,
       minimum: 1
     },
   }
@@ -43,8 +43,11 @@ let configStoreOptions = {
 try {
   global.configStore = new Store(configStoreOptions);
 
+  // 服务开双端口，用于解决音效页面访问问题
+  // 参考 https://github.com/nondanee/UnblockNeteaseMusic/issues/537#issuecomment-629621533
+  let _port = global.configStore.get('port');
   global.userConfig = {
-    port: `${global.configStore.get('port')}`, 
+    port: `${_port}:${_port + 1}`, 
     source: global.configStore.get('source')
   };
 } catch (e) {

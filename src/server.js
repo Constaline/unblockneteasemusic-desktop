@@ -6,12 +6,13 @@ const portfinder = require('portfinder');
 const {appQuit} = require('./utils')
 
 const startServerInstance = () => {
-  let _port = global.userConfig.port;
-  portfinder.basePort = _port;
+  let _port = global.userConfig.port.split(':').map(string => parseInt(string));
+  let _basePort = _port[0];
+  portfinder.basePort = _basePort;
   const checkPort = (callback) => {
     portfinder.getPortPromise()
       .then((port) => {
-        if(port == _port) {
+        if(port == _basePort) {
           callback(null)
         } else {
           callback(`Port ${_port} is already in use`)
