@@ -1,4 +1,4 @@
-const {app, dialog, nativeImage} = require('electron');
+const { app, dialog, nativeImage } = require('electron');
 const notifier = require('node-notifier');
 const path = require('path')
 
@@ -13,15 +13,15 @@ const showDialog = ({ message }) => {
 }
 
 const showNotification = ({ message }) => {
-  if(!app.isPackaged) { return; }
+  if (!app.isPackaged) { return; }
   return notifier.notify({
     title: global.appInfo.name,
     message,
     icon: path.join(global.ROOT_PATH, '../assets/notifer.png'),  // not to pack in asar
     sound: false,
-    appName: global.appInfo.name, 
+    appName: global.appInfo.name,
     wait: true
-  },);
+  });
 }
 
 module.exports = {

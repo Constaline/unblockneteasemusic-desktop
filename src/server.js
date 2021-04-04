@@ -1,9 +1,9 @@
-const {showDialog, showNotification} = require('./notifier')
-const {setTrayToolTip} = require('./tray')
+const { showDialog, showNotification } = require('./notifier')
+const { setTrayToolTip } = require('./tray')
 const startUnblockServer = require('../lib/UnblockNeteaseMusic/src/app');
-const {waterfall} = require('async');
+const { waterfall } = require('async');
 const portfinder = require('portfinder');
-const {appQuit} = require('./utils')
+const { appQuit } = require('./utils')
 
 const startServerInstance = () => {
   let _port = global.userConfig.port.split(':').map(string => parseInt(string));
@@ -12,7 +12,7 @@ const startServerInstance = () => {
   const checkPort = (callback) => {
     portfinder.getPortPromise()
       .then((port) => {
-        if(port == _basePort) {
+        if (port == _basePort) {
           callback(null)
         } else {
           callback(`Port ${_port} is already in use`)
@@ -40,7 +40,7 @@ const startServerInstance = () => {
     checkPort,
     startServer
   ], (err, result) => {
-    showDialog({ message: `Server error: ${err}`})
+    showDialog({ message: `Server error: ${err}` })
       .then(() => {
         appQuit()
       })
