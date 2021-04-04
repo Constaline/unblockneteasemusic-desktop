@@ -1,7 +1,7 @@
-const {app} = require('electron')
+const { app } = require('electron')
 const path = require('path')
 const Store = require('electron-store');
-const {removeConfigFile} = require('./utils')
+const { removeConfigFile } = require('./utils')
 
 global.ROOT_PATH = path.join(__dirname, '../')
 global.USERDATA_PATH = app.getPath('userData');
@@ -22,8 +22,8 @@ global.tray = null;
 global.userConfig = {}
 
 let configStoreOptions = {
-  defaults: { 
-    '__instruction__': 'After configuaration, please relaunch the app.', 
+  defaults: {
+    '__instruction__': 'After configuaration, please relaunch the app.',
     '__source_list__': `['qq', 'kuwo', 'migu', 'xiami', 'baidu', 'kugou', 'joox', 'youtube']`,
     source: ['qq', 'kuwo', 'migu'],
     port: 16163
@@ -47,7 +47,7 @@ try {
   // 参考 https://github.com/nondanee/UnblockNeteaseMusic/issues/537#issuecomment-629621533
   let _port = global.configStore.get('port');
   global.userConfig = {
-    port: `${_port}:${_port + 1}`, 
+    port: `${_port}:${_port + 1}`,
     source: global.configStore.get('source')
   };
 } catch (e) {

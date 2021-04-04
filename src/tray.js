@@ -1,12 +1,12 @@
-const {app, Menu, Tray, shell} = require('electron')
-const {appQuit, appRelaunch} = require('./utils')
+const { app, Menu, Tray, shell } = require('electron')
+const { appQuit, appRelaunch } = require('./utils')
 
 const contextMenu = Menu.buildFromTemplate([
   {
     label: `${global.appInfo.name} v${appInfo.version}`
   },
   {
-    type: 'separator' 
+    type: 'separator'
   },
   {
     label: `Configuration`,
@@ -17,31 +17,31 @@ const contextMenu = Menu.buildFromTemplate([
   {
     label: `View Log Files`,
     click: () => {
-     shell.openExternal(global.LOG_PATH)
+      shell.openExternal(global.LOG_PATH)
     }
   },
   {
-    type : 'checkbox',
+    type: 'checkbox',
     label: 'Open At Login',
     checked: app.getLoginItemSettings().openAtLogin,
     click: () => {
-      if(!app.isPackaged){ return; }
+      if (!app.isPackaged) { return; }
       app.setLoginItemSettings({
         openAtLogin: !app.getLoginItemSettings().openAtLogin,
       })
     }
   },
   { type: 'separator' },
-  { 
-    label: 'Relaunch', 
+  {
+    label: 'Relaunch',
     click: () => {
       appRelaunch();
     }
   },
-  { 
-    label: 'Exit', 
+  {
+    label: 'Exit',
     click: () => {
-      appQuit() 
+      appQuit()
     }
   }
 ]);
@@ -53,7 +53,7 @@ const createTray = () => {
 }
 
 const setTrayToolTip = (tooltip) => {
-  if(!tray) { return; }
+  if (!tray) { return; }
   tray.setToolTip(tooltip)
 }
 

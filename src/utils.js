@@ -1,4 +1,4 @@
-const {app} = require('electron')
+const { app } = require('electron')
 const fse = require('fs-extra')
 const path = require('path')
 
@@ -9,7 +9,7 @@ const appQuit = () => {
 
 const appRelaunch = () => {
   console.log('App Relaunch')
-  app.relaunch({args: process.argv.slice(1) + ['--relaunch']})
+  app.relaunch({ args: process.argv.slice(1) + ['--relaunch'] })
   app.exit(0)
 }
 
