@@ -9,7 +9,7 @@ global.LOG_PATH = path.join(USERDATA_PATH, './log/')
 
 global.ICON_PATH = {
   common: path.join(ROOT_PATH, './assets/icon.png'),
-  tray: path.join(ROOT_PATH, './assets/tray.png')
+  tray: path.join(ROOT_PATH, './assets/tray@2x.png')
 }
 
 global.appInfo = {
