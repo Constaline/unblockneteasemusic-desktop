@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/Constaline/unblockneteasemusic-desktop.git"
   },
+  "author": "akarin",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "7.0.2",
