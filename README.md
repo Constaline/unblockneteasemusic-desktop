@@ -9,3 +9,6 @@ UnblockNeteaseMusic Windows Desktop version.
 
 ## Thanks
 * [nondanee/UnblockNeteaseMusic](https://github.com/nondanee/UnblockNeteaseMusic)
+* [njzydark/UnblockNeteaseMusic](https://github.com/njzydark/UnblockNeteaseMusic)
+* [1715173329/UnblockNeteaseMusic](https://github.com/1715173329/UnblockNeteaseMusic)
+* [LXG-Shadow/UnblockNeteaseMusic](https://github.com/LXG-Shadow/UnblockNeteaseMusic)
