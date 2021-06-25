@@ -50,6 +50,18 @@ try {
     port: `${_port}:${_port + 1}`,
     source: global.configStore.get('source')
   };
+
+  // process.argv differs in built electron apps
+  // https://github.com/electron/electron/issues/4690#issuecomment-422617581
+  if (app.isPackaged) {
+    process.argv.unshift(null)
+  }
+
+  // 传入 config.matchOrder/config.port 到 process.argv
+  let _argv_port = ['-p', global.userConfig.port];
+  let _argv_matchorder = ['-o', global.userConfig.source];
+  process.argv = [...process.argv, ..._argv_port, ..._argv_matchorder];
+
 } catch (e) {
   console.log('Init Store ERROR:', e);
   removeConfigFile()
