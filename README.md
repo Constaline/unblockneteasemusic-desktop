@@ -8,7 +8,7 @@ UnblockNeteaseMusic Windows Desktop version.
 3. Save and restart the NeteaseMusic client. Enjoy!
 
 ## Thanks
+* [UnblockNeteaseMusic/server](https://github.com/UnblockNeteaseMusic/server)
 * [nondanee/UnblockNeteaseMusic](https://github.com/nondanee/UnblockNeteaseMusic)
 * [njzydark/UnblockNeteaseMusic](https://github.com/njzydark/UnblockNeteaseMusic)
-* [1715173329/UnblockNeteaseMusic](https://github.com/1715173329/UnblockNeteaseMusic)
 * [LXG-Shadow/UnblockNeteaseMusic](https://github.com/LXG-Shadow/UnblockNeteaseMusic)
