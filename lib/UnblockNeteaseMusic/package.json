@@ -1,5 +1,5 @@
 {
-  "name": "@1715173329/unblockneteasemusic",
+  "name": "unblockneteasemusic",
   "version": "0.26.1",
   "description": "Revive unavailable songs for Netease Cloud Music",
   "main": "src/provider/match.js",
@@ -10,15 +10,11 @@
     "pkg": "pkg . --out-path=dist/"
   },
   "pkg": {
-    "scripts": "build/**/*.js",
     "assets": [
       "server.key",
       "server.crt"
     ],
     "targets": [
-      "node14-linux-arm64",
-      "node14-win-arm64",
-      "node14-linux-x64",
       "node14-win-x64"
     ],
     "outputPath": "dist"
@@ -29,6 +25,8 @@
   },
   "author": "nondanee, 1715173329, pan93412",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "long": "5.2.0"
+  },
   "private": true
 }
