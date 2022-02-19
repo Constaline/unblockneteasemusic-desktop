@@ -11,9 +11,9 @@ UnblockNeteaseMusic Windows Desktop version.
 See [Release Page](https://github.com/Constaline/unblockneteasemusic-desktop/releases)
 
 ## Settings 
-> Click tray icon in the system's notification area, And click "Configuration" in context menu.
-
-> After configuaration, please relaunch the app.
+1. Click tray icon in the system's notification area, and click "Configuration" in context menu.
+2. Edit `config.json`.
+3. Relaunch the UnblockNeteaseMusic client.
 
 #### `config.json` arugments
 
