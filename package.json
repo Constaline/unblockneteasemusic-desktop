@@ -1,6 +1,6 @@
 {
   "name": "unblockneteasemusic-desktop",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "unblockneteasemusic desktop version",
   "main": "./src/main.js",
   "scripts": {
