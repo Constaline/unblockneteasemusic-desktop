@@ -14,7 +14,7 @@ module.exports = {
     "output": "dist"
   },
   // Include "lib/UnblockNeteaseMusic/node_modules" in asar
-  "includeSubNodeModules": true,
+  // "includeSubNodeModules": true,
   "dmg": {
     "contents": [
       {
