@@ -21,6 +21,7 @@ See [Release Page](https://github.com/Constaline/unblockneteasemusic-desktop/rel
 |---|-----------|-------|--------|
 |port|The HTTP proxy port.|`16163`|-|
 |source|Rewrite file url, let client request file through source list.|-|-|
+|envionmentVariables|Envionment variables for UnblockNeteaseMusic|-|-|
 
 ## Thanks
 * [nondanee/UnblockNeteaseMusic](https://github.com/nondanee/UnblockNeteaseMusic)

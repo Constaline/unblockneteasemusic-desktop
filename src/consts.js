@@ -26,7 +26,8 @@ let configStoreOptions = {
     '__instruction__': 'After configuaration, please relaunch the app.',
     '__source_list__': ["qq", "kuwo", "migu", "baidu", "kugou", "joox", "youtube", "bilibili", "pyncmd"],
     source: ['kuwo', 'migu', 'bilibili', 'pyncmd'],
-    port: 16163
+    port: 16163,
+    envionmentVariables: {}
   },
   schema: {
     source: {
@@ -37,6 +38,9 @@ let configStoreOptions = {
       maximum: 65530,
       minimum: 1
     },
+    envionmentVariables: {
+      type: 'object'
+    }
   }
 };
 
@@ -62,6 +66,11 @@ try {
   let _argv_matchorder = ['-o', global.userConfig.source];
   process.argv = [...process.argv, ..._argv_port, ..._argv_matchorder];
 
+  // 传入 config.envionmentVariables 到 process.env
+  let _env = global.configStore.get('envionmentVariables');
+  Object.keys(_env).forEach(key => {
+    process.env[key] = _env[key];
+  });
 } catch (e) {
   console.log('Init Store ERROR:', e);
   removeConfigFile()
