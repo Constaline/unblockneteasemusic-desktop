@@ -26,10 +26,10 @@ jobs:
             - name: Cleanup precompiled
               run: rm -rf precompiled/*
 
-            - name: Use Node.js 18
-              uses: actions/setup-node@v3
+            - name: Use Node.js 20
+              uses: actions/setup-node@v4
               with:
-                  node-version: 18
+                  node-version: 20
                   cache: yarn
 
             - name: Install dependencies
@@ -39,7 +39,7 @@ jobs:
               run: yarn build
 
             - name: Create Pull Request
-              uses: peter-evans/create-pull-request@v5
+              uses: peter-evans/create-pull-request@v6
               with:
                   token: ${{ github.token }}
                   commit-message: 'build(precompiled): make a bundle with the dependencies'
