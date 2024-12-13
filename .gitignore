@@ -74,3 +74,4 @@ src/browser/cache.js
 # others
 .npmrc
 package-lock.json
+assets/ca.crt

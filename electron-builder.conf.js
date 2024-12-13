@@ -8,7 +8,8 @@ module.exports = {
     "node_modules/node-notifier/vendor/**"
   ],
   "extraResources": [
-    "assets/notifer.png"
+    "assets/notifer.png",
+    "assets/ca.crt"
   ],
   "directories": {
     "output": "dist"

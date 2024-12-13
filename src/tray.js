@@ -1,5 +1,5 @@
 const { app, Menu, Tray, shell } = require('electron')
-const { appQuit, appRelaunch } = require('./utils')
+const { appQuit, appRelaunch, installCertificate } = require('./utils')
 
 const contextMenu = Menu.buildFromTemplate([
   {
@@ -20,6 +20,13 @@ const contextMenu = Menu.buildFromTemplate([
       shell.openExternal(global.LOG_PATH)
     }
   },
+  {
+    label: `Install Certificate`,
+    click: () => {
+      installCertificate()
+    }
+  },
+  { type: 'separator' },
   {
     type: 'checkbox',
     label: 'Open At Login',
