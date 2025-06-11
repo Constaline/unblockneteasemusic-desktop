@@ -24,8 +24,8 @@ global.userConfig = {}
 let configStoreOptions = {
   defaults: {
     '__instruction__': 'After configuaration, please relaunch the app.',
-    '__source_list__': ["qq", "kuwo", "migu", "baidu", "kugou", "joox", "youtube", "bilibili", "pyncmd"],
-    source: ['kuwo', 'migu', 'bilibili', 'pyncmd'],
+    '__source_list__': ["qq", "kuwo", "migu", "baidu", "kugou", "joox", "youtube", "pyncmd"],
+    source: ['kuwo', 'migu'],
     port: 16163,
     envionmentVariables: {}
   },
