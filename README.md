@@ -1,3 +1,5 @@
+
+
 # UnblockNeteaseMusic Desktop
 
 UnblockNeteaseMusic Windows Desktop version.
@@ -15,7 +17,7 @@ See [Release Page](https://github.com/Constaline/unblockneteasemusic-desktop/rel
 2. Edit `config.json`.
 3. Relaunch the UnblockNeteaseMusic client.
 
-#### `config.json` arugments
+#### `config.json` arguments
 
 |key|description|default|optional|
 |---|-----------|-------|--------|
